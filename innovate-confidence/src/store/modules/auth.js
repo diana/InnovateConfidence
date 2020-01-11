@@ -24,6 +24,8 @@ const actions = {
         })
     },
     createUser(user){
+        // eslint-disable-next-line no-console
+        // console.log(user)
         backend.createUser(user)
     }
 }

@@ -4,7 +4,7 @@
         <h3>Sign Up as New User</h3>
         <router-link to="/login">Already A User?</router-link>
       </div>
-      <form @submit.prevent="handleSubmit">
+      <form @submit.prevent="createUser">
           <label>Username:</label>
           <input type="text" v-model="user.username" required>
           <label>Email:</label>
@@ -18,6 +18,7 @@
 </template>
 
 <script>
+// eslint-disable-next-line no-unused-vars
 import { mapActions } from 'vuex'
 
 export default {
@@ -30,11 +31,10 @@ export default {
        }}
     },
     methods:{
-        ...mapActions('auth',["createUser"]),
-        handleSubmit(){
+        // ...mapActions(['createUser']),
+        createUser(){
             // eslint-disable-next-line no-console
-            console.log(this.createUser)
-        },
+            return console.log(this.user)}
     }
 }
 </script>
